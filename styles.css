@@ -37,6 +37,8 @@ body {
 	font-size: 20px;
 	padding-bottom:10px;
 	background-color: var(--background-100);
+	transform: scale(0.5); /* Boyutu %90'a düşür */
+    	transform-origin: top center; /* Üstten ortalayarak küçült */
 }
 
 a {
