@@ -38,3 +38,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+ 
+function toggleMobileMenu() {
+    var menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+}

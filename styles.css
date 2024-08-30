@@ -29,18 +29,36 @@
 	--deneme : #f9fb82;
 	
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 
 body {
-	height: 100%;
+
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
 	padding-bottom:10px;
 	background-color: var(--background-100);
-	transform: scale(0.4);
+    transform: scale(0.5); /* Boyutu %90'a düşür */
     transform-origin: top center; /* Üstten ortalayarak küçült */
 }
+
+@media (max-width: 1024px) {
+    body {
+        transform: scale(0.85); /* Daha küçük ekranlarda boyutu %85'e düşür */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        transform: scale(0.8); /* Daha küçük ekranlarda boyutu %80'e düşür */
+    }
+}
+
 
 a {
 	text-decoration: none;
@@ -143,6 +161,7 @@ header {
 		}
 	}
 }
+
 
 section {
 	max-width:1440px;
@@ -843,13 +862,20 @@ h3 {
 
 
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
 
 .footer {
-    background-color: var(--blue-200);
-    color: black;
-    padding: 30px;
+    background-color: var(--blue-200); /* Arka plan rengi */
+    color: black; /* Metin rengi */
+    padding: 30px 0;
     text-align: center;
-    margin-top: auto; /* Footer'ı sayfanın altına itmek için */
 }
 
 .footer-content {
