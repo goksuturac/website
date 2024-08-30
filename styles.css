@@ -31,14 +31,15 @@
 }
 
 body {
+	height: 100%;
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: 20px;
 	padding-bottom:10px;
 	background-color: var(--background-100);
-	transform: scale(0.5); /* Boyutu %90'a düşür */
-    	transform-origin: top center; /* Üstten ortalayarak küçült */
+	transform: scale(0.6); /* Boyutu düşür */
+    transform-origin: top center; /* Üstten ortalayarak küçült */
 }
 
 a {
@@ -844,10 +845,11 @@ h3 {
 
 
 .footer {
-    background-color: var(--blue-200); /* Arka plan rengi */
-    color: black; /* Metin rengi */
+    background-color: var(--blue-200);
+    color: black;
     padding: 30px;
     text-align: center;
+    margin-top: auto; /* Footer'ı sayfanın altına itmek için */
 }
 
 .footer-content {
