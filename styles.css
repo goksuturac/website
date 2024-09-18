@@ -444,6 +444,10 @@ h3 {
         background-color: var(--light-green);
     }
 
+	.education-item:nth-child(3) {
+        background-color: var(--yellow-100);
+    }
+
     /* Responsive adjustments */
     @media (max-width: 1024px) {
         .education-item {
