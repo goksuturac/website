@@ -21,6 +21,11 @@
 	--blue-800: #0a61ae;
 	--hero: #93e4ea;
 	--hero-200: #dbe481;
+	--brown-100:#ede0d4;
+	--brown-200:#d6ccc2;
+	--brown-300:#b08968;
+	--brown-400:#7f5539;
+	--brown-500:#492c23;
 	--yellow-100: #FFF9E6; 
 	--light-blue: #e1f5f8; 
 	--light-green: #e2ece3; 
@@ -677,7 +682,71 @@ h3 {
     }
 }
 
+.project{
+	.holder-brown {
+    background-color: var(--brown-200);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+	}
 
+    .left-column, .right-column {
+        flex: 1;
+    }
+
+    .models-used, .libraries-used {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .model, .library {
+		color: white;
+        display: inline-block;
+        background-color: var(--brown-400); 
+        padding: 10px 20px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        text-align: center;
+    }
+
+    .right-column p {
+        margin-bottom: 20px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .holder-yellow {
+            flex-direction: column;
+        }
+
+        .models-used, .libraries-used {
+            justify-content: space-between; /* Kutuların yan yana gelmesini sağlar */
+        }
+
+        .model, .library {
+            flex: 1 1 45%; /* Kutuların genişliği %45 olur, iki kutu yan yana sığar */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .holder-yellow {
+            flex-direction: column;
+        }
+
+        .models-used, .libraries-used {
+            justify-content: center; /* Küçük ekranlarda merkezde hizalama */
+        }
+
+        .model, .library {
+            flex: 1 1 100%; /* Kutular tam genişlikte görünür */
+        }
+    }
+}
 .bento {
 	.bento-grid {
 		display:grid;
