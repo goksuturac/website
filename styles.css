@@ -398,89 +398,91 @@ h3 {
 }
 
 
-/* Education Section */
-.education {
-    .holder-blue {
-        background-color: var(--base-300);
-        border-radius: 30px;
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 100%; /* Kutuların genişliğini sınırlamak için */
+.list-section {
+  .list-holder {
+    background-color: var(--base-300);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .list-item {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .item-left,
+  .item-right {
+    flex: 1;
+  }
+
+  .item-left {
+    margin-right: 20px;
+  }
+
+  .item-right {
+    text-align: right;
+  }
+
+  .list-item h3 {
+    color: var(--blue-600);
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  /* Variant background colors for sequential items */
+  .list-item:nth-child(1) {
+    background-color: var(--light-blue);
+  }
+
+  .list-item:nth-child(2) {
+    background-color: var(--light-green);
+  }
+
+  .list-item:nth-child(3) {
+    background-color: var(--yellow-100);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .list-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .education-item {
-        border: none;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%; /* Kutuların genişliğini tam yap */
+    .item-left,
+    .item-right {
+      margin-right: 0;
+      text-align: center;
     }
 
-    .left, .right {
-        flex: 1;
+    .list-item h3 {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .list-holder {
+      padding: 20px;
     }
 
-    .left {
-        margin-right: 20px;
+    .list-item {
+      padding: 15px;
     }
-
-    .right {
-        text-align: right;
-    }
-
-    .education-item h3 {
-        color: var(--blue-600);
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-
-    /* Farklı eğitim programları için özel arka plan renkleri */
-    .education-item:nth-child(1) {
-        background-color: var(--light-blue);
-    }
-
-    .education-item:nth-child(2) {
-        background-color: var(--light-green);
-    }
-
-	.education-item:nth-child(3) {
-        background-color: var(--yellow-100);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        .education-item {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .left, .right {
-            margin-right: 0;
-            text-align: center;
-        }
-
-        .education-item h3 {
-            font-size: 28px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .holder-blue {
-            padding: 20px;
-        }
-
-        .education-item {
-            padding: 15px;
-        }
-    }
+  }
 }
+
 
 /* Skills Section */
 .skills {
